@@ -1,0 +1,64 @@
+Screen {
+    layout: horizontal;
+}
+
+#chat-list {
+    width: 32;
+    border-right: tall $accent;
+}
+
+#right-pane {
+    width: 1fr;
+    layout: vertical;
+}
+
+#message-view {
+    height: 1fr;
+}
+
+.message {
+    padding: 0 1;
+    margin-bottom: 1;
+}
+
+.empty-hint {
+    color: $text-muted;
+    padding: 1 2;
+}
+
+#compose {
+    height: auto;
+    max-height: 6;
+    min-height: 3;
+    border-top: tall $accent;
+}
+
+#compose:focus {
+    border-top: tall $success;
+}
+
+#calendar-view {
+    display: none;
+    width: 1fr;
+    border-right: tall $accent;
+}
+
+MainScreen.calendar-mode #calendar-view {
+    display: block;
+}
+
+MainScreen.calendar-mode #chat-list {
+    display: none;
+}
+
+MainScreen.calendar-mode #right-pane {
+    display: none;
+}
+
+StatusBar {
+    dock: bottom;
+    height: 1;
+    background: $surface;
+    color: $text;
+    padding: 0 1;
+}
