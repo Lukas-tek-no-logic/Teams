@@ -8,3 +8,4 @@ build/
 *.db
 uv.lock
 .textual/
+rs/target/
